@@ -1,0 +1,25 @@
+﻿  MyForm.cpp
+  Source.cpp
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(40,33): warning C4244: =: преобразование "wchar_t" в "char", возможна потеря данных
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(47,23): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(67,31): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(70,23): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(90,31): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(93,23): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(113,31): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(116,23): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(137,31): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(140,35): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(143,23): warning C4101: ex: неиспользованная локальная переменная
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(168,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(179,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(181,40): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(196,32): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(247,14): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(250,11): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(269,30): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\Desktop\учеба\лабы прога\LAB666\LAB666\Source.cpp(278,31): warning C4018: >: несоответствие типов со знаком и без знака
+  Stack.cpp
+  Создание кода...
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  LAB666.vcxproj -> C:\Users\user\Desktop\учеба\лабы прога\LAB666\x64\Debug\LAB666.exe
