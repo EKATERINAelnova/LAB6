@@ -1,6 +1,6 @@
 //Source.cpp;
-//функции для нажатий кнопок и сортировок
-//Ельнова Екатерина, группа 3091, 1 курс
+//ГґГіГ­ГЄГ¶ГЁГЁ Г¤Г«Гї Г­Г Г¦Г ГІГЁГ© ГЄГ­Г®ГЇГ®ГЄ ГЁ Г±Г®Г°ГІГЁГ°Г®ГўГ®ГЄ
+//Г…Г«ГјГ­Г®ГўГ  Г…ГЄГ ГІГҐГ°ГЁГ­Г , ГЈГ°ГіГЇГЇГ  3091, 1 ГЄГіГ°Г±
 //29.05.24-31.05.24
 
 #include "MyForm.h"
@@ -11,17 +11,17 @@ const int nmax = 1000;
 using namespace System;
 using namespace System::Windows::Forms;
 
-Stack<double> stack; //основной стэк
+Stack<double> stack; //Г®Г±Г­Г®ГўГ­Г®Г© Г±ГІГЅГЄ
 
-//добавление в стэк
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Гў Г±ГІГЅГЄ
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnPush_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
         unsigned int varik = comboBox1->SelectedIndex;
         double temp;
         int tem;
-        char ch;
+        wchar_t ch;
         switch (varik) {
         case 0:
             tem = Convert::ToInt32(txtInput->Text);
@@ -44,12 +44,12 @@ void LAB666::MyForm::btnPush_Click(System::Object^ sender, System::EventArgs^ e)
         }
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Ошибка ввода!");
+        MessageBox::Show("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г !");
     }
 }
 
-//прибавление к последнему элементу стэка значения определённого
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//ГЇГ°ГЁГЎГ ГўГ«ГҐГ­ГЁГҐ ГЄ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГ¬Гі ГЅГ«ГҐГ¬ГҐГ­ГІГі Г±ГІГЅГЄГ  Г§Г­Г Г·ГҐГ­ГЁГї Г®ГЇГ°ГҐГ¤ГҐГ«ВёГ­Г­Г®ГЈГ®
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnAdd_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -64,15 +64,15 @@ void LAB666::MyForm::btnAdd_Click(System::Object^ sender, System::EventArgs^ e) 
         txtInput->Clear();
     }
     catch (std::out_of_range& ex) {
-        MessageBox::Show("Не к чему прибавлять! :(");
+        MessageBox::Show("ГЌГҐ ГЄ Г·ГҐГ¬Гі ГЇГ°ГЁГЎГ ГўГ«ГїГІГј! :(");
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Ошибка ввода!");
+        MessageBox::Show("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г !");
     }
 }
 
-//отнятие от последнего элемента стэка значения определённого
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//Г®ГІГ­ГїГІГЁГҐ Г®ГІ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г±ГІГЅГЄГ  Г§Г­Г Г·ГҐГ­ГЁГї Г®ГЇГ°ГҐГ¤ГҐГ«ВёГ­Г­Г®ГЈГ®
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnSubtract_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -87,15 +87,15 @@ void LAB666::MyForm::btnSubtract_Click(System::Object^ sender, System::EventArgs
         txtInput->Clear();
     }
     catch (std::out_of_range& ex) {
-        MessageBox::Show("Не от чего отнимать! :(");
+        MessageBox::Show("ГЌГҐ Г®ГІ Г·ГҐГЈГ® Г®ГІГ­ГЁГ¬Г ГІГј! :(");
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Ошибка ввода!");
+        MessageBox::Show("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г !");
     }
 }
 
-//умножение последнего элемента стэка на значение определённое
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г±ГІГЅГЄГ  Г­Г  Г§Г­Г Г·ГҐГ­ГЁГҐ Г®ГЇГ°ГҐГ¤ГҐГ«ВёГ­Г­Г®ГҐ
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnMultiply_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -110,15 +110,15 @@ void LAB666::MyForm::btnMultiply_Click(System::Object^ sender, System::EventArgs
         txtInput->Clear();
     }
     catch (std::out_of_range& ex) {
-        MessageBox::Show("Нечего умножать! :(");
+        MessageBox::Show("ГЌГҐГ·ГҐГЈГ® ГіГ¬Г­Г®Г¦Г ГІГј! :(");
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Ошибка ввода в окно");
+        MessageBox::Show("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г  Гў Г®ГЄГ­Г®");
     }
 }
 
-//деление последнего элемента стэка на значение определённое
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//Г¤ГҐГ«ГҐГ­ГЁГҐ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г±ГІГЅГЄГ  Г­Г  Г§Г­Г Г·ГҐГ­ГЁГҐ Г®ГЇГ°ГҐГ¤ГҐГ«ВёГ­Г­Г®ГҐ
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnDivide_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -134,18 +134,18 @@ void LAB666::MyForm::btnDivide_Click(System::Object^ sender, System::EventArgs^ 
         txtInput->Clear();
     }
     catch (std::out_of_range& ex) {
-        MessageBox::Show("Нечего делить! :(");
+        MessageBox::Show("ГЌГҐГ·ГҐГЈГ® Г¤ГҐГ«ГЁГІГј! :(");
     }
     catch (std::invalid_argument& ex) {
-        MessageBox::Show("Делить на ноль нельзя... не будь глупи");
+        MessageBox::Show("Г„ГҐГ«ГЁГІГј Г­Г  Г­Г®Г«Гј Г­ГҐГ«ГјГ§Гї... Г­ГҐ ГЎГіГ¤Гј ГЈГ«ГіГЇГЁ");
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Ошибка ввода!");
+        MessageBox::Show("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г !");
     }
 }
 
-//удаление последнего элемента из стэка
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//ГіГ¤Г Г«ГҐГ­ГЁГҐ ГЇГ®Г±Г«ГҐГ¤Г­ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЁГ§ Г±ГІГЅГЄГ 
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnPop_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -153,15 +153,15 @@ void LAB666::MyForm::btnPop_Click(System::Object^ sender, System::EventArgs^ e) 
             stack.pop();
             lstStack->Items->RemoveAt(lstStack->Items->Count - 1);
         }else
-            MessageBox::Show("Не отнимай! и так ничего нет...");
+            MessageBox::Show("ГЌГҐ Г®ГІГ­ГЁГ¬Г Г©! ГЁ ГІГ ГЄ Г­ГЁГ·ГҐГЈГ® Г­ГҐГІ...");
     }
     catch (std::out_of_range&) {
-        MessageBox::Show("Не отнимай! и так ничего нет...");
+        MessageBox::Show("ГЌГҐ Г®ГІГ­ГЁГ¬Г Г©! ГЁ ГІГ ГЄ Г­ГЁГ·ГҐГЈГ® Г­ГҐГІ...");
     }
 }
 
-//перенос элементов из массива в стэк
-//массив и его размер(double ar[], int size)
+//ГЇГҐГ°ГҐГ­Г®Г± ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГЁГ§ Г¬Г Г±Г±ГЁГўГ  Гў Г±ГІГЅГЄ
+//Г¬Г Г±Г±ГЁГў ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°(double ar[], int size)
 //void
 void PrintArr(double ar[], int size) {
     for (unsigned int j = 0; j < size; j++) {
@@ -170,8 +170,8 @@ void PrintArr(double ar[], int size) {
     }
 }
 
-//сортировка Выборкой
-//массив и его размер(double ar[], int size)
+//Г±Г®Г°ГІГЁГ°Г®ГўГЄГ  Г‚Г»ГЎГ®Г°ГЄГ®Г©
+//Г¬Г Г±Г±ГЁГў ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°(double ar[], int size)
 //void
 void selectionSort(double ar[], int size) {
 
@@ -187,8 +187,8 @@ void selectionSort(double ar[], int size) {
     PrintArr(ar, size);
 }
 
-// Алгоритм простых вставок для сортировки массива
-//массив и его размер(double ar[], int size)
+// ГЂГ«ГЈГ®Г°ГЁГІГ¬ ГЇГ°Г®Г±ГІГ»Гµ ГўГ±ГІГ ГўГ®ГЄ Г¤Г«Гї Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г¬Г Г±Г±ГЁГўГ 
+//Г¬Г Г±Г±ГЁГў ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°(double ar[], int size)
 //void
 void insertionSort(double ar[], int size) {
 
@@ -204,8 +204,8 @@ void insertionSort(double ar[], int size) {
     PrintArr(ar, size);
 }
 
-//Пузырьковая сортировка
-//массив и его размер(double ar[], int size)
+//ГЏГіГ§Г»Г°ГјГЄГ®ГўГ Гї Г±Г®Г°ГІГЁГ°Г®ГўГЄГ 
+//Г¬Г Г±Г±ГЁГў ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°(double ar[], int size)
 //void
 void BublSort(double ar[], int size) {
     unsigned int i = size - 1;
@@ -223,23 +223,23 @@ void BublSort(double ar[], int size) {
     PrintArr(ar, size);
 }
 
-// Рекурсивная функция для быстрой сортировки (метод Хоара)
-//массив, 0 и его размер-1 (double ar[], int left, int right)
+// ГђГҐГЄГіГ°Г±ГЁГўГ­Г Гї ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЎГ»Г±ГІГ°Г®Г© Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ (Г¬ГҐГІГ®Г¤ Г•Г®Г Г°Г )
+//Г¬Г Г±Г±ГЁГў, 0 ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°-1 (double ar[], int left, int right)
 //void
 void quickSortRecursive(double ar[], int left, int right) {
     double mid = ar[(left + right) / 2];
     unsigned int i = left;
     unsigned int j = right;
     while (i <= j) {
-        while (ar[i] < mid) {   //пока серединный элемент больше левого элемента
+        while (ar[i] < mid) {   //ГЇГ®ГЄГ  Г±ГҐГ°ГҐГ¤ГЁГ­Г­Г»Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЎГ®Г«ГјГёГҐ Г«ГҐГўГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ 
             i++;
         }
-        while (ar[j] > mid) {  //пока серединный элемент меньше правого элемента
+        while (ar[j] > mid) {  //ГЇГ®ГЄГ  Г±ГҐГ°ГҐГ¤ГЁГ­Г­Г»Г© ГЅГ«ГҐГ¬ГҐГ­ГІ Г¬ГҐГ­ГјГёГҐ ГЇГ°Г ГўГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ 
             j--;
         }
 
-        //левый элемент больший среднего и правый элемент меньший среднего меняются местами, 
-        // если индекс левого меньше индекса правого или равен ему
+        //Г«ГҐГўГ»Г© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЎГ®Г«ГјГёГЁГ© Г±Г°ГҐГ¤Г­ГҐГЈГ® ГЁ ГЇГ°Г ГўГ»Г© ГЅГ«ГҐГ¬ГҐГ­ГІ Г¬ГҐГ­ГјГёГЁГ© Г±Г°ГҐГ¤Г­ГҐГЈГ® Г¬ГҐГ­ГїГѕГІГ±Гї Г¬ГҐГ±ГІГ Г¬ГЁ, 
+        // ГҐГ±Г«ГЁ ГЁГ­Г¤ГҐГЄГ± Г«ГҐГўГ®ГЈГ® Г¬ГҐГ­ГјГёГҐ ГЁГ­Г¤ГҐГЄГ±Г  ГЇГ°Г ГўГ®ГЈГ® ГЁГ«ГЁ Г°Г ГўГҐГ­ ГҐГ¬Гі
         if (i <= j) {
             std::swap(ar[i], ar[j]);
             i++;
@@ -247,51 +247,51 @@ void quickSortRecursive(double ar[], int left, int right) {
         }
     }
     if (left < j) {
-        quickSortRecursive(ar, left, j); //возврат к сортировки левой части массива (она также разбивается на левую и правую части)
+        quickSortRecursive(ar, left, j); //ГўГ®Г§ГўГ°Г ГІ ГЄ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г«ГҐГўГ®Г© Г·Г Г±ГІГЁ Г¬Г Г±Г±ГЁГўГ  (Г®Г­Г  ГІГ ГЄГ¦ГҐ Г°Г Г§ГЎГЁГўГ ГҐГІГ±Гї Г­Г  Г«ГҐГўГіГѕ ГЁ ГЇГ°Г ГўГіГѕ Г·Г Г±ГІГЁ)
     }
     if (i < right) {
-        quickSortRecursive(ar, i, right); //возврат к сортировки правой части массива (она также разбивается на левую и правую части)
+        quickSortRecursive(ar, i, right); //ГўГ®Г§ГўГ°Г ГІ ГЄ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ ГЇГ°Г ГўГ®Г© Г·Г Г±ГІГЁ Г¬Г Г±Г±ГЁГўГ  (Г®Г­Г  ГІГ ГЄГ¦ГҐ Г°Г Г§ГЎГЁГўГ ГҐГІГ±Гї Г­Г  Г«ГҐГўГіГѕ ГЁ ГЇГ°Г ГўГіГѕ Г·Г Г±ГІГЁ)
     }
 
 }
 
-// Функция Шейкер-сортировки
-//массив и его размер(double ar[], int size)
+// Г”ГіГ­ГЄГ¶ГЁГї ГГҐГ©ГЄГҐГ°-Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ
+//Г¬Г Г±Г±ГЁГў ГЁ ГҐГЈГ® Г°Г Г§Г¬ГҐГ°(double ar[], int size)
 //void
 void shekerSort(double ar[], int size)
 {
     unsigned int left = 0;
-    unsigned int right = size - 1; // левая и правая границы сортируемой области массива
-    bool flag = true;  // флаг наличия перемещений
-    // Выполнение цикла пока левая граница не сомкнётся с правой
-    // и пока в массиве имеются перемещения
+    unsigned int right = size - 1; // Г«ГҐГўГ Гї ГЁ ГЇГ°Г ГўГ Гї ГЈГ°Г Г­ГЁГ¶Г» Г±Г®Г°ГІГЁГ°ГіГҐГ¬Г®Г© Г®ГЎГ«Г Г±ГІГЁ Г¬Г Г±Г±ГЁГўГ 
+    bool flag = true;  // ГґГ«Г ГЈ Г­Г Г«ГЁГ·ГЁГї ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГ©
+    // Г‚Г»ГЇГ®Г«Г­ГҐГ­ГЁГҐ Г¶ГЁГЄГ«Г  ГЇГ®ГЄГ  Г«ГҐГўГ Гї ГЈГ°Г Г­ГЁГ¶Г  Г­ГҐ Г±Г®Г¬ГЄГ­ВёГІГ±Гї Г± ГЇГ°Г ГўГ®Г©
+    // ГЁ ГЇГ®ГЄГ  Гў Г¬Г Г±Г±ГЁГўГҐ ГЁГ¬ГҐГѕГІГ±Гї ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї
     while ((left < right) && flag)
     {
         flag = false;
-        for (int i = left; i < right; i++)  //двигаемся слева направо
+        for (int i = left; i < right; i++)  //Г¤ГўГЁГЈГ ГҐГ¬Г±Гї Г±Г«ГҐГўГ  Г­Г ГЇГ°Г ГўГ®
         {
-            if (ar[i] > ar[i + 1]) // если следующий элемент меньше текущего,
+            if (ar[i] > ar[i + 1]) // ГҐГ±Г«ГЁ Г±Г«ГҐГ¤ГіГѕГ№ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ Г¬ГҐГ­ГјГёГҐ ГІГҐГЄГіГ№ГҐГЈГ®,
             {
-                std::swap(ar[i], ar[i + 1]);// меняем их местами
-                flag = true;      // перемещения в этом цикле были
+                std::swap(ar[i], ar[i + 1]);// Г¬ГҐГ­ГїГҐГ¬ ГЁГµ Г¬ГҐГ±ГІГ Г¬ГЁ
+                flag = true;      // ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї Гў ГЅГІГ®Г¬ Г¶ГЁГЄГ«ГҐ ГЎГ»Г«ГЁ
             }
         }
-        right--; // сдвигаем правую границу на предыдущий элемент
-        for (int i = right; i > left; i--)  //двигаемся справа налево
+        right--; // Г±Г¤ГўГЁГЈГ ГҐГ¬ ГЇГ°Г ГўГіГѕ ГЈГ°Г Г­ГЁГ¶Гі Г­Г  ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ
+        for (int i = right; i > left; i--)  //Г¤ГўГЁГЈГ ГҐГ¬Г±Гї Г±ГЇГ°Г ГўГ  Г­Г Г«ГҐГўГ®
         {
-            if (ar[i - 1] > ar[i]) // если предыдущий элемент больше текущего,
+            if (ar[i - 1] > ar[i]) // ГҐГ±Г«ГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ ГЎГ®Г«ГјГёГҐ ГІГҐГЄГіГ№ГҐГЈГ®,
             {
-                std::swap(ar[i], ar[i - 1]);// меняем их местами
-                flag = true;    // перемещения в этом цикле были
+                std::swap(ar[i], ar[i - 1]);// Г¬ГҐГ­ГїГҐГ¬ ГЁГµ Г¬ГҐГ±ГІГ Г¬ГЁ
+                flag = true;    // ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї Гў ГЅГІГ®Г¬ Г¶ГЁГЄГ«ГҐ ГЎГ»Г«ГЁ
             }
         }
-        left++; // сдвигаем левую границу на следующий элемент
+        left++; // Г±Г¤ГўГЁГЈГ ГҐГ¬ Г«ГҐГўГіГѕ ГЈГ°Г Г­ГЁГ¶Гі Г­Г  Г±Г«ГҐГ¤ГіГѕГ№ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ
     }
     PrintArr(ar, size);
 }
 
-//сортировка выбранным методом
-//объекты графики (System::Object^ sender, System::EventArgs^ e)
+//Г±Г®Г°ГІГЁГ°Г®ГўГЄГ  ГўГ»ГЎГ°Г Г­Г­Г»Г¬ Г¬ГҐГІГ®Г¤Г®Г¬
+//Г®ГЎГєГҐГЄГІГ» ГЈГ°Г ГґГЁГЄГЁ (System::Object^ sender, System::EventArgs^ e)
 //void
 void LAB666::MyForm::btnSort_Click(System::Object^ sender, System::EventArgs^ e) {
     try {
@@ -337,7 +337,7 @@ void LAB666::MyForm::btnSort_Click(System::Object^ sender, System::EventArgs^ e)
             }
             break;
         default:
-            MessageBox::Show("Выберите вариант сортировки!");
+            MessageBox::Show("Г‚Г»ГЎГҐГ°ГЁГІГҐ ГўГ Г°ГЁГ Г­ГІ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ!");
         }
     }
     catch (std::out_of_range&) {
