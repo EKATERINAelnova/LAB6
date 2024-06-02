@@ -21,7 +21,7 @@ void LAB666::MyForm::btnPush_Click(System::Object^ sender, System::EventArgs^ e)
         unsigned int varik = comboBox1->SelectedIndex;
         double temp;
         int tem;
-        wchar_t ch;
+        char ch;
         switch (varik) {
         case 0:
             tem = Convert::ToInt32(txtInput->Text);
